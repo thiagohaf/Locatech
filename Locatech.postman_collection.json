@@ -1,0 +1,384 @@
+{
+	"info": {
+		"_postman_id": "4bcb3049-8a70-4bb6-a839-e47a705899ba",
+		"name": "Locatech",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "285916"
+	},
+	"item": [
+		{
+			"name": "veiculos",
+			"item": [
+				{
+					"name": "GET Veiculos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/veiculos?page=1&size=10",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"veiculos"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Veiculo",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/veiculos/2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"veiculos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Veiculo",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"marca\": \"FIAT\",\n    \"modelo\": \"Argo\",\n    \"placa\": \"ABC-102030\",\n    \"ano\": 2010,\n    \"cor\": \"cinza\",\n    \"valorDiaria\": 150.00\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/veiculos",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"veiculos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Veiculo",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"marca\": \"FIAT\",\n    \"modelo\": \"Argo\",\n    \"placa\": \"ABC-102030\",\n    \"ano\": 2024,\n    \"cor\": \"cinza\",\n    \"valorDiaria\": 150.00\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/veiculos/2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"veiculos",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Veiculo",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/veiculos/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"veiculos",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "pessoas",
+			"item": [
+				{
+					"name": "GET Pessoas",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/pessoas?page=1&size=10",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoas"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Pessoa",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/pessoas/1",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Pessoas",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Maria\",\n    \"cpf\": \"19942038722\",\n    \"telefone\": \"1199999-9999\",\n    \"email\": \"maria@teste.com.br\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/pessoas",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"pessoas"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Pessoas",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"nome\": \"Thiago Ferreira\",\n    \"cpf\": \"19942038722\",\n    \"telefone\": \"1199999-9999\",\n    \"email\": \"thiago@teste.com.br\"\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/pessoas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Pessoas",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080/pessoas/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pessoas",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "alugueis",
+			"item": [
+				{
+					"name": "GET Alugueis",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/alugueis?page=1&size=10",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alugueis"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "1"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET Aluguel",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/alugueis/2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alugueis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST Alugueis",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"pessoaId\": 2,\n    \"veiculoId\": 2,\n    \"dataInicio\": \"2024-10-01\",\n    \"dataFim\": \"2024-10-15\",\n    \"valorTotal\": 1200.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/alugueis",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alugueis"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT Alugueis",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": 2,\n    \"pessoaId\": 2,\n    \"veiculoId\": 2,\n    \"veiculoModelo\": \"Argo\",\n    \"pessoaCpf\": \"19942038722\",\n    \"pessoaNome\": \"Maria\",\n    \"dataInicio\": \"2024-10-01\",\n    \"dataFim\": \"2024-10-15\",\n    \"valorTotal\": 1000.00\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}/alugueis/2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alugueis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE Alugueis",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/alugueis/2",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"alugueis",
+								"2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "",
+			"type": "default"
+		}
+	]
+}
